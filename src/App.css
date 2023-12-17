@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+body{
+    max-width: 1480px;
+    margin: 0 auto;
+    background-color: #34353a;
+    color: #FFFFFF !important;
+}
+
+.profile-bg{
+    background: url('./assets/images/portfolio-img.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
