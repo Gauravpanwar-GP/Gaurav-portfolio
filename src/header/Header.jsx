@@ -1,4 +1,4 @@
-import { Download } from "lucide";
+import { Download, Menu } from "lucide";
 import React from "react";
 
 const Header = () => {
@@ -9,7 +9,10 @@ const Header = () => {
           GAURAV
         </h1>
       </div>
-      <div className="w-[60%]">
+      <div className="block md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </div>
+      <div className="w-[60%] hidden md:block">
         <ul className="flex justify-center items-center gap-8">
           <li className="cursor-pointer font-semibold">ABOUT</li>
           <li className="cursor-pointer font-semibold">PROJECTS</li>
@@ -17,7 +20,7 @@ const Header = () => {
           <li className="cursor-pointer font-semibold">CONTACT</li>
         </ul>
       </div>
-      <div className="w-[20%] flex justify-end">
+      <div className="w-[20%] hidden md:flex justify-end">
         <button className="flex gap-3 items-center bg-[#FFFFFF] py-2 px-4 text-[#212121] font-semibold rounded-[10px] text-sm shadow-[0px_2px_10px_#f3f3f3]">
           <svg
             xmlns="http://www.w3.org/2000/svg"

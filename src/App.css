@@ -4,7 +4,7 @@ body{
     max-width: 1480px;
     margin: 0 auto;
     background-color: #34353a;
-    color: #FFFFFF !important;
+    color: #F1F1F1 !important;
 }
 
 .profile-bg{
@@ -12,4 +12,10 @@ body{
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-bg{
+        background-position: left bottom;
+    }
 }
