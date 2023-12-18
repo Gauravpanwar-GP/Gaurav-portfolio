@@ -3,7 +3,8 @@
 body{
     max-width: 1480px;
     margin: 0 auto;
-    background-color: #34353a;
+    /* background-color: #34353a; */
+    background-color: #212121;
     color: #F1F1F1 !important;
 }
 
@@ -14,8 +15,42 @@ body{
     background-size: contain;
 }
 
+.vertical-line::before{
+    content: "";
+    border-right: 2px solid #FAB84D;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+}
+
+.about{
+    font-size: 18px;
+    position: relative;
+    padding: 20px 60px;
+    text-align: justify;
+}
+
+.about::before{
+    content: "";
+    border-top: 2px solid #FAB84D;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    height: 10px;
+    width: 50px;
+}
+
 @media only screen and (max-width: 480px) {
     .profile-bg{
         background-position: left bottom;
+    }
+    .about{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .about::before{
+        top: 0;
     }
 }
