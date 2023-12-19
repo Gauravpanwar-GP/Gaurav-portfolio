@@ -15,16 +15,24 @@ const Header = () => {
       </div>
       <div className="w-[60%] hidden md:block">
         <ul className="flex justify-center items-center gap-8">
-          <li className="cursor-pointer font-semibold mix-blend-difference">ABOUT</li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">PROJECTS</li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">SKILLS</li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">CONTACT</li>
+          <li className="cursor-pointer font-semibold mix-blend-difference">
+            <a href="#about">ABOUT</a>
+          </li>
+          <li className="cursor-pointer font-semibold mix-blend-difference">
+            PROJECTS
+          </li>
+          <li className="cursor-pointer font-semibold mix-blend-difference">
+            SKILLS
+          </li>
+          <li className="cursor-pointer font-semibold mix-blend-difference">
+            CONTACT
+          </li>
         </ul>
       </div>
       <div className="w-[20%] hidden md:flex justify-end">
         <button className="flex gap-3 items-center bg-[#FFFFFF] py-2 px-4 text-[#212121] font-semibold rounded-[10px] text-sm shadow-[0px_2px_10px_#FAB84D]">
           <DownloadIcon />
-           RESUME
+          RESUME
         </button>
       </div>
     </div>

@@ -16,13 +16,17 @@ body{
 }
 
 .vertical-line::before{
-    content: "";
-    border-right: 2px solid #FAB84D;
+    content: "Let's Connect";
+    border-bottom: 2px solid #FAB84D;
     position: absolute;
-    bottom: 110%;
+    top: -100%;
     left: 50%;
-    transform: translateX(-50%);
-    height: 150px;
+    transform: translate(-52%, -120%) rotate(270deg);
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
 }
 
 .about{
