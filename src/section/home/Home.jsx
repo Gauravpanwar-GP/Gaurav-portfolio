@@ -6,6 +6,17 @@ import {
   Instagram,
   LinkedinIcon,
 } from "lucide-react";
+import Lottie from "react-lottie";
+import codeGif from "../../assets/lottie/Animation - 1706721120955.json";
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: codeGif,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 const Home = () => {
   const [showText, setShowText] = useState(false);
@@ -16,7 +27,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="h-[calc(100vh-150px)] md:h-[calc(100vh-80px)] md:items-center flex justify-end py-10 px-4 md:py-20 md:px-32 profile-bg relative">
+    <div className="h-[calc(100vh-150px)] md:h-[calc(100vh-80px)] md:items-center flex flex-col md:flex-row py-10 px-4 md:py-20 md:px-32 profile-bg relative">
+      <div className="md:w-[40%]">
+        <Lottie options={defaultOptions} height={350} width={350} />
+      </div>
       <div className="md:w-[60%]">
         <p className="text-[1.2em] md:text-[2em]">I'M</p>
         <p className="font-bold text-[3em] text-[#FAB84D]">Gaurav Panwar,</p>

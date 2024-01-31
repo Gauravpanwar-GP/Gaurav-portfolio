@@ -9,7 +9,7 @@ const Skills = () => {
           {skillsData?.map((item, index)=>{
             return (
               <div className='grid gap-4 w-[150px] md:w-[200px] text-center justify-center border-2 rounded-[8px] border-[#F3F3F3] p-4 hover:bg-[#FAB84D70] hover:border-[#FAB84D]'>
-                {item.iconUrl}
+                <img src={item.iconUrl} width={80} />
                 <p className='text-[18px] font-semibold'>{item.label}</p>
               </div>
             )
