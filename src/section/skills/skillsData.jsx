@@ -64,4 +64,8 @@ export const skillsData = [
     label: "MUI",
     iconUrl: mui,
   },
+  {
+    label: "Styled Component",
+    iconUrl: "",
+  },
 ];

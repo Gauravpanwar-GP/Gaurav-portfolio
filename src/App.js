@@ -5,6 +5,9 @@ import Header from "./header/Header";
 import Home from "./section/home/Home";
 import About from "./section/about/About";
 import Skills from "./section/skills/Skills";
+import Projects from "./section/projects/Projects";
+import Footer from "./footer/Footer";
+import Contact from "./section/contact/Contact";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </React.Fragment>
   );
 }

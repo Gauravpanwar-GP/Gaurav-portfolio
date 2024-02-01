@@ -32,7 +32,7 @@ const Home = () => {
         <Lottie options={defaultOptions} height={350} width={350} />
       </div>
       <div className="md:w-[60%]">
-        <p className="text-[1.2em] md:text-[2em]">I'M</p>
+        <p className="text-[1.2em] md:text-[2em]">Hey, I'm</p>
         <p className="font-bold text-[3em] text-[#FAB84D]">Gaurav Panwar,</p>
         <p className="text-[1em] md:text-[1.5em]">
           A Frontend Web Developer dedicated to constructing interactive User
@@ -45,19 +45,40 @@ const Home = () => {
       </div>
       <div className="fixed bottom-6 right-10 hidden md:block">
         <ul className="grid gap-3 vertical-line">
-          <li className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer">
+          <li
+            className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer"
+            onClick={() => {
+              window.open("https://github.com/Gauravpanwar-GP", "_blank");
+            }}
+          >
             <GithubIcon className="text-[#212121] group-hover:text-[#FFFFFF]" />
             <p className="hidden group-hover:block bg-[#595959] text-white absolute top-[50%] px-2 py-1 text-[12px] rounded-[8px] -translate-y-[50%] right-[50px]">
               GitHub
             </p>
           </li>
-          <li className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer">
+          <li
+            className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer"
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/gaurav-panwar-79b49623a/",
+                "_blank"
+              );
+            }}
+          >
             <LinkedinIcon className="text-[#212121] group-hover:text-[#FFFFFF]" />
             <p className="hidden group-hover:block bg-[#595959] text-white absolute top-[50%] px-2 py-1 text-[12px] rounded-[8px] -translate-y-[50%] right-[50px]">
               LinkedIn
             </p>
           </li>
-          <li className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer">
+          <li
+            className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer"
+            onClick={() => {
+              window.open(
+                "https://www.instagram.com/gauravpanwar694/",
+                "_blank"
+              );
+            }}
+          >
             <Instagram className="text-[#212121] group-hover:text-[#FFFFFF]" />
             <p className="hidden group-hover:block bg-[#595959] text-white w-auto absolute top-[50%] px-2 py-1 text-[12px] rounded-[8px] -translate-y-[50%] right-[50px]">
               Instagram
@@ -69,19 +90,40 @@ const Home = () => {
       <div className="fixed bottom-6 right-10 md:hidden block">
         {showSocialmedia && (
           <ul className="grid gap-3">
-            <li className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer">
+            <li
+              className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer"
+              onClick={() => {
+                window.open("https://github.com/Gauravpanwar-GP", "_blank");
+              }}
+            >
               <GithubIcon
                 size={30}
                 className="text-[#212121] group-hover:text-[#FFFFFF]"
               />
             </li>
-            <li className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer">
+            <li
+              className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/gaurav-panwar-79b49623a/",
+                  "_blank"
+                );
+              }}
+            >
               <LinkedinIcon
                 size={30}
                 className="text-[#212121] group-hover:text-[#FFFFFF]"
               />
             </li>
-            <li className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer">
+            <li
+              className="hover:bg-[#FAB84D] bg-white p-2 rounded-full relative group cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://www.instagram.com/gauravpanwar694/",
+                  "_blank"
+                );
+              }}
+            >
               <Instagram
                 size={30}
                 className="text-[#212121] group-hover:text-[#FFFFFF]"

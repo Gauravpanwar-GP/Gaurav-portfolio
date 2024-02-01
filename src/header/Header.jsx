@@ -6,7 +6,12 @@ const Header = () => {
   return (
     <div className="bg-[#212121] py-4 px-4 md:px-10 flex justify-between items-center text-[#FFFFFF] sticky top-0 z-10">
       <div className="w-[20%]">
-        <h1 className="font-rubik text-[2em] font-bold text-[#FFFFFF]">
+        <h1
+          className="font-rubik text-[2em] font-bold text-[#FFFFFF] cursor-pointer"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           GAURAV
         </h1>
       </div>
@@ -15,16 +20,44 @@ const Header = () => {
       </div>
       <div className="w-[60%] hidden md:block">
         <ul className="flex justify-center items-center gap-8">
-          <li className="cursor-pointer font-semibold mix-blend-difference">
-            <a href="#about">ABOUT</a>
+          <li
+            className="cursor-pointer font-semibold mix-blend-difference"
+            onClick={() => {
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            ABOUT
           </li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">
-            PROJECTS
-          </li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">
+          <li
+            className="cursor-pointer font-semibold mix-blend-difference"
+            onClick={() => {
+              document
+                .getElementById("skills")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             SKILLS
           </li>
-          <li className="cursor-pointer font-semibold mix-blend-difference">
+          <li
+            className="cursor-pointer font-semibold mix-blend-difference"
+            onClick={() => {
+              document
+                .getElementById("projects")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            PROJECTS
+          </li>
+          <li
+            className="cursor-pointer font-semibold mix-blend-difference"
+            onClick={() => {
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             CONTACT
           </li>
         </ul>
