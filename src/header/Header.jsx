@@ -1,8 +1,29 @@
-import { Download, Menu } from "lucide";
+import clsx from "clsx";
 import { DownloadIcon, MenuIcon } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
+import resume from '../assets/pdf/Gaurav_panwar_web_developer_resume.pdf';
 
 const Header = () => {
+  // useEffect(()=>{
+  //   let sections = document.querySelectorAll('section');
+  //   let navLinks = document.querySelectorAll('div ul li');
+
+  //   window.onscroll = () => {
+  //     sections.forEach(sec => {
+  //       let top = window.scrollY;
+  //       let offset = sec.offsetTop;
+  //       let height = sec.offsetHeight;
+  //       let id = sec.getAttribute('id');
+
+  //       if(top >= offset && top < offset+height){
+  //         navLinks.forEach(links => {
+  //           links.classList.remove('active');
+  //         })
+  //       }
+  //     })
+  //   }
+  // }, []);
+
   return (
     <div className="bg-[#212121] py-4 px-4 md:px-10 flex justify-between items-center text-[#FFFFFF] sticky top-0 z-10">
       <div className="w-[20%]">
@@ -21,7 +42,8 @@ const Header = () => {
       <div className="w-[60%] hidden md:block">
         <ul className="flex justify-center items-center gap-8">
           <li
-            className="cursor-pointer font-semibold mix-blend-difference"
+            className={clsx("cursor-pointer font-semibold mix-blend-difference border-effect active")}
+            aria-current="page"
             onClick={() => {
               document
                 .getElementById("about")
@@ -31,7 +53,7 @@ const Header = () => {
             ABOUT
           </li>
           <li
-            className="cursor-pointer font-semibold mix-blend-difference"
+            className="cursor-pointer font-semibold mix-blend-difference border-effect"
             onClick={() => {
               document
                 .getElementById("skills")
@@ -41,7 +63,7 @@ const Header = () => {
             SKILLS
           </li>
           <li
-            className="cursor-pointer font-semibold mix-blend-difference"
+            className="cursor-pointer font-semibold mix-blend-difference border-effect"
             onClick={() => {
               document
                 .getElementById("projects")
@@ -51,7 +73,7 @@ const Header = () => {
             PROJECTS
           </li>
           <li
-            className="cursor-pointer font-semibold mix-blend-difference"
+            className="cursor-pointer font-semibold mix-blend-difference border-effect"
             onClick={() => {
               document
                 .getElementById("contact")
@@ -63,7 +85,9 @@ const Header = () => {
         </ul>
       </div>
       <div className="w-[20%] hidden md:flex justify-end">
-        <button className="flex gap-3 items-center bg-[#FFFFFF] py-2 px-4 text-[#212121] font-semibold rounded-[10px] text-sm shadow-[0px_2px_10px_#FAB84D]">
+        <button className="flex gap-3 items-center bg-[#FFFFFF] py-2 px-4 text-[#212121] font-semibold rounded-[10px] text-sm shadow-[0px_2px_10px_#FAB84D]" onClick={()=>{
+          window.open(resume,"_blank");
+        }}>
           <DownloadIcon />
           RESUME
         </button>

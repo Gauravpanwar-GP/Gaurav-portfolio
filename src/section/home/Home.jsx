@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="h-[calc(100vh-150px)] md:h-[calc(100vh-80px)] md:items-center flex flex-col md:flex-row py-10 px-4 md:py-20 md:px-32 profile-bg relative">
       <div className="md:w-[40%]">
-        <Lottie options={defaultOptions} height={350} width={350} />
+        <Lottie options={defaultOptions} height={350} width={350} isClickToPauseDisabled />
       </div>
       <div className="md:w-[60%]">
         <p className="text-[1.2em] md:text-[2em]">Hey, I'm</p>
