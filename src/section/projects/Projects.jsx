@@ -9,12 +9,14 @@ const Projects = () => {
     <React.Fragment>
       <section
         id="projects"
-        className="px-4 py-10 md:py-10 md:px-20 bg-[#212121]"
+        className="px-4 py-20 md:p-20 bg-[#3d3e42] min-h-screen"
       >
         <h1 className="text-[38px] font-bold text-center">Projects</h1>
-        <div className="flex items-center justify-center flex-wrap gap-4 md:gap-10 mt-10 max-w-[1024px] mx-auto">
-          <div className="grid md:w-[300px] text-center justify-center border-[1px] rounded-[10px] border-[#adadad] overflow-hidden h-[300px]">
-            <img src={gym} />
+        <div className="flex items-center justify-center flex-wrap gap-10 mt-10 max-w-[1024px] mx-auto">
+          <div className="flex flex-col bg-[#212121] w-[300px] text-center h-[300px] project-border">
+            <div className="h-[145px] flex">
+              <img src={gym} className="h-auto object-cover" />
+            </div>
             <div className="text-left p-4">
               <p className="text-[18px] font-semibold">Fitness Website</p>
               <p className="text-[14px] mt-4">
@@ -22,8 +24,10 @@ const Projects = () => {
               </p>
             </div>
           </div>
-          <div className="grid gap-4 md:w-[300px] text-center justify-center border-[1px] rounded-[10px] border-[#adadad] overflow-hidden h-[300px]">
-            <img src={flipkart} />
+          <div className="flex flex-col bg-[#212121] w-[300px] text-center project-border h-[300px]">
+            <div className="h-[145px] flex">
+              <img src={flipkart} className="h-auto object-cover" />
+            </div>
             <div className="text-left p-4">
               <p className="text-[18px] font-semibold">Flipkart Clone</p>
               <p className="text-[14px] mt-4">
@@ -32,12 +36,17 @@ const Projects = () => {
             </div>
           </div>
           <div
-            className="grid gap-4 md:w-[300px] text-center justify-center border-[1px] rounded-[10px] border-[#adadad] overflow-hidden cursor-pointer h-[300px]"
+            className="flex flex-col bg-[#212121] w-[300px] text-center cursor-pointer h-[300px]"
             onClick={() => {
-              window.open("https://gauravpanwar.vercel.app/", "_blank");
+              window.open(
+                "https://gauravpanwar-portfolio.vercel.app/",
+                "_blank"
+              );
             }}
           >
-            <img src={portfolio} />
+            <div className="h-[145px] flex">
+              <img src={portfolio} className="h-auto object-cover" />
+            </div>
             <div className="text-left p-4">
               <p className="text-[18px] font-semibold">Portfolio</p>
               <p className="text-[14px] mt-4">
@@ -52,7 +61,7 @@ const Projects = () => {
             free to explore my previous portfolio if you're interested.
           </p>
           <div
-            className="grid mx-auto md:w-[300px] text-center justify-center border-2 rounded-[10px] border-[#adadad] cursor-pointer overflow-hidden h-[300px]"
+            className="flex flex-col mx-auto bg-[#212121] w-[300px] text-center overflow-hidden cursor-pointer h-[300px]"
             onClick={() => {
               window.open("https://gauravpanwar.vercel.app/", "_blank");
             }}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   ChevronDownIcon,
   ChevronUpIcon,
@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Lottie from "react-lottie";
 import codeGif from "../../assets/lottie/Animation - 1706721120955.json";
+import clsx from "clsx";
 
 const defaultOptions = {
   loop: true,
@@ -21,15 +22,37 @@ const defaultOptions = {
 const Home = () => {
   const [showText, setShowText] = useState(false);
   const [showSocialmedia, setShowSocialmedia] = useState(false);
+  const connectRef = useRef(null);
+  const smRef = useRef(null);
 
   useEffect(() => {
     setShowText(true);
+
+    function handleShow(event) {
+      if (
+        (connectRef?.current && !connectRef?.current?.contains(event.target)) &&
+        (smRef?.current && !smRef?.current?.contains(event.target))
+      ) {
+        setShowSocialmedia(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleShow);
+
+    return () => {
+      document.removeEventListener("mousedown", handleShow);
+    };
   }, []);
 
   return (
-    <div className="h-[calc(100vh-150px)] md:h-[calc(100vh-80px)] md:items-center flex flex-col md:flex-row py-10 px-4 md:py-20 md:px-32 profile-bg relative">
+    <div className="h-[calc(100vh-80px)] md:items-center flex flex-col md:flex-row py-10 px-4 md:py-20 md:px-32 profile-bg relative">
       <div className="md:w-[40%]">
-        <Lottie options={defaultOptions} height={350} width={350} isClickToPauseDisabled />
+        <Lottie
+          options={defaultOptions}
+          height={350}
+          width={350}
+          isClickToPauseDisabled
+        />
       </div>
       <div className="md:w-[60%]">
         <p className="text-[1.2em] md:text-[2em]">Hey, I'm</p>
@@ -39,7 +62,14 @@ const Home = () => {
           Experiences (UX) and crafting sleek Interfaces (UI). My primary focus
           is on designing attractive, clean-cut user interfaces.
         </p>
-        <button className="border-2 border-[#FAB84D] text-[#FAB84D] rounded-[10px] py-2 px-4 font-semibold mt-6">
+        <button
+          className="border-2 border-[#FAB84D] text-[#FAB84D] rounded-[10px] py-2 px-4 font-semibold mt-6"
+          onClick={() => {
+            document
+              .getElementById("contact")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           CONTACT ME
         </button>
       </div>
@@ -87,9 +117,9 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className="fixed bottom-6 right-10 md:hidden block">
+      <div className="fixed z-10 bottom-6 right-10 md:hidden block">
         {showSocialmedia && (
-          <ul className="grid gap-3">
+          <ul className="grid gap-3" ref={smRef}>
             <li
               className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer"
               onClick={() => {
@@ -132,23 +162,28 @@ const Home = () => {
           </ul>
         )}
         <p
-          className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative cursor-pointer mt-4"
+          ref={connectRef}
+          className="bg-white p-2 rounded-full relative cursor-pointer mt-4"
           onClick={() => {
             setShowSocialmedia(!showSocialmedia);
             setShowText(false);
           }}
         >
-          {showSocialmedia ? (
+          {/* {showSocialmedia ? (
             <ChevronDownIcon
               size={30}
               className="text-[#212121] group-hover:text-[#FFFFFF]"
             />
           ) : (
-            <ChevronUpIcon
-              size={30}
-              className="text-[#212121] group-hover:text-[#FFFFFF]"
             />
-          )}
+            )} */}
+          <ChevronUpIcon
+            size={30}
+            className={clsx(
+              "transition-all duration-500 text-[#212121] group-hover:text-[#FFFFFF]",
+              showSocialmedia ? "rotate-180" : ""
+            )}
+          />
           {showText && (
             <p className="bg-[#595959] text-white absolute top-[-80%] px-2 py-1 text-[16px] rounded-[8px] right-[0px] w-max">
               Let's Connect
