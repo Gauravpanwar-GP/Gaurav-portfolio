@@ -73,7 +73,7 @@ const Home = () => {
           CONTACT ME
         </button>
       </div>
-      <div className="fixed bottom-6 right-10 hidden md:block">
+      <div className="absolute bottom-6 right-10 hidden md:block">
         <ul className="grid gap-3 vertical-line">
           <li
             className="hover:bg-[#FAB84D] bg-white mix-blend-difference p-2 rounded-full relative group cursor-pointer"

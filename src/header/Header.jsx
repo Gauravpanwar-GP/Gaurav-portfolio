@@ -50,7 +50,7 @@ const Header = () => {
         <ul
           className={clsx(
             "overflow-hidden transition-all duration-500 absolute mt-3 top-[38px] text-[#212121] -right-4 w-screen font-bold z-10 shadow bg-white text-center",
-            showHamMenu ? "h-[224px] visible" : "h-0 invisible"
+            showHamMenu ? "h-[280px] visible" : "h-0 invisible"
           )}
         >
           <li
@@ -96,6 +96,16 @@ const Header = () => {
             }}
           >
             Let's Connect
+          </li>
+          <li
+            className="py-4 px-4 hover:bg-[#FAB84D] hover:text-[#FFFFFF] flex gap-2 items-center justify-center"
+            onClick={() => {
+              setShowHamMenu(false);
+              window.open(resume, "_blank");
+            }}
+          >
+            <DownloadIcon />
+            RESUME
           </li>
         </ul>
       </div>

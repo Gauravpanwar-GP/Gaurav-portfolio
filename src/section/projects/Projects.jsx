@@ -55,7 +55,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <p className="font-medium text-center my-4">
             I am presently designing my new Portfolio UI. In the meantime, feel
             free to explore my previous portfolio if you're interested.
@@ -74,7 +74,7 @@ const Projects = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </React.Fragment>
   );

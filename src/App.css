@@ -62,6 +62,26 @@ body{
     height: 30%;
 }
 
+.connect-border::before{
+    content: "";
+    border-bottom: 2px solid #FAB84D;
+    width: 100%;
+    left: -61%;
+    top: 60%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.connect-border::after{
+    content: "";
+    border-bottom: 2px solid #FAB84D;
+    width: 100%;
+    right: -61%;
+    top: 60%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
 @media only screen and (max-width: 480px) {
     .profile-bg{
         background-position: left bottom;
@@ -85,6 +105,13 @@ body{
         width: 30%;
         height: 5px;
     }
+    .connect-border::before{
+        left: -75%;
+    }
+    
+    .connect-border::after{
+        right: -75%;
+    }
 }
 
 .active{
@@ -98,4 +125,8 @@ body{
 
 .border-effect:hover{
     border-bottom: 2px solid #FAB84D;
+}
+
+.connect-border{
+    position: relative;
 }
